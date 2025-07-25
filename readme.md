@@ -3,7 +3,7 @@
 This is the frontend interface for the Crypto Crash Game — a real-time betting game built with WebSockets and REST APIs.
 
 🌐 Live URL: https://crypto-crash.netlify.app  
-🔌 Connects to backend: https://your-backend.onrender.com
+🔌 Connects to backend: https://crashcryptogame.onrender.com
 
 ## 🧪 Tech Used
 - HTML, CSS, JS
