@@ -1,0 +1,13 @@
+body {
+  font-family: system-ui, sans-serif;
+}
+input, select {
+  border: none;
+  outline: none;
+}
+button:hover {
+  opacity: 0.9;
+}
+.hidden {
+  display: none;
+}

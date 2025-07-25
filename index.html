@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Crypto Crash</title>
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+</head>
+
+<body class="bg-gray-900 text-white font-sans">
+
+  <div class="container mx-auto px-4 py-6 text-center">
+    <h1 class="text-4xl font-bold mb-2">🚀 Crypto Crash</h1>
+    <p class="text-sm mb-4">Watch the multiplier, place your bet, and cash out before it crashes!</p>
+
+    <div id="multiplier" class="text-6xl  font-bold text-green-400 my-4">1.00x</div>
+    <div id="status" class="text-sm text-gray-400 mb-6">Waiting for next round...</div>
+    <div class="mb-6 ">
+      <h2 class="text-xl font-semibold mb-2">👤 Create Player</h2>
+      <input id="playerName" type="text" placeholder="Enter Name" class="px-4 py-2 text-black rounded" />
+      <button onclick="createPlayer()" class="bg-green-500 px-4 py-2 ml-2 rounded text-white">Create Player</button>
+    </div>
+    <div class="flex justify-center gap-4 mb-4">
+
+
+      <input id="playerId" type="text" placeholder="Enter Player ID" class="px-4 py-2 text-black rounded" />
+      <input id="betAmount" type="number" placeholder="Bet in USD" class="px-4 py-2 text-black rounded" />
+      <select id="currency" class="px-4 py-2 text-black rounded">
+        <option value="BTC">BTC</option>
+        <option value="ETH">ETH</option>
+      </select>
+      <button onclick="placeBet()" class="bg-blue-500 px-4 py-2 rounded text-white">Place Bet</button>
+      <button onclick="cashout()" class="bg-yellow-500 px-4 py-2 rounded text-black">💸 Cash Out</button>
+    </div>
+
+    <div class="my-6">
+      <h2 class="text-xl font-semibold mb-2">💰 Wallet</h2>
+      <div class="text-sm text-gray-300 mb-2">Enter a Player ID above to view balance.</div>
+      <input id="walletID" type="text" placeholder="Enter Player ID" class="px-4 py-2 text-black rounded" />
+      <div id="wallet" class="text-sm my-2 text-gray-300"></div>
+      <button onclick="fetchWallet()" class="bg-blue-500 my-2 py-2 rounded text-white">Check Wallet</button>
+    </div>
+
+    <div class="my-6">
+      <h2 class="text-xl font-semibold mb-2">📜 Recent Rounds</h2>
+      <ul id="history" class="text-sm text-gray-400"></ul>
+    </div>
+
+    <div id="toast" class="fixed bottom-4 right-4 bg-black text-white px-4 py-2 rounded shadow-lg hidden"></div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
